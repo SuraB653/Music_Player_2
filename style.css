@@ -1,0 +1,194 @@
+body{
+    background-color: #121212;
+    color: aliceblue;
+}
+*{
+    /* shortcut: p->enter & m->enter */
+    padding: 0; 
+    margin: 0;
+}
+
+/* google fonts thingy */
+.bitcount-prop-single-nav{
+    font-family: "Bitcount Prop Single",system-ui;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0,
+      "CRSV" 0.5,
+      "ELSH" 0,
+      "ELXP" 0;
+}
+.quicksand-brand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.moo-lah-lah-regular {
+    font-family: "Moo Lah Lah", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.delius-regular {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+  
+nav{
+    font-family: "Delius", cursive;
+    position: sticky;
+    top: 0;
+}
+
+nav ul{
+    display: flex; /*all items get horizontal*/
+    align-items: center;
+    list-style-type: none; /*removes bullets from list*/
+    height: 65px;
+    background-color: #000000;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+.brand img{
+    width: 42px;
+    padding: 0 8px;
+}
+
+.brand{
+    display: flex;
+    align-items: center; /*vertically center*/
+    /* font-weight: bold; */
+    font-size: 1.3rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.container{
+    height: 63vh;
+    background-color: gray;
+    /* background-color: #121212; */
+    color: aliceblue;
+    font-family: "Delius", cursive;
+    display: flex;
+    width:70%;
+    margin: 23px auto;
+    border-radius: 10px;
+    padding: 26px;
+    overflow: auto;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-track {
+    background: #767474;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #102b03;
+    border-radius: 35px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #1e5105;
+}
+
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 110px;
+    background-color: #000000;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Delius", cursive;
+}
+
+#masterSongName{
+    position: absolute;
+    left: 12vw;
+    bottom: 7vh;
+    font-size:x-large;
+
+}
+
+.icons{
+    margin-bottom: 11px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+    background-color: #1e5105;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: rgb(16, 43, 3);
+    width: 69vw;
+    margin: 12px 0;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 8px;
+    user-select: none;
+}
+
+
+.songItem:hover{
+    /* background-color: #2a2a2a; */
+    background-color: #1e5105;
+}
+
+.songItem img{
+    width: 40px;
+    margin: 0 18px;
+    border-radius:3px;
+    padding-right: 18px;
+}
+
+.songName{
+    font-size: larger;
+    cursor: pointer;
+    /* position: absolute;
+    left: 23%; */
+    text-align: left;
+    /* padding: 20px; */
+    width: 18vw;
+}
+
+.songName:hover{
+    text-decoration: underline;
+}
+
+.artist{
+    color: #b3b3b3;
+    /* position: absolute;
+    left: 42%; */
+    text-align: left;
+    width: 38vw;
+}
+
+.ts{
+    width: 4vw;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ts i{
+    cursor: pointer;
+}
