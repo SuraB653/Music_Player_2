@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
-    <!-- google fonts start --><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Delius&family=Moo+Lah+Lah&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- google fonts start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Delius&family=Moo+Lah+Lah&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <!-- google fonts end -->
 </head>
 <body>
     <nav>
         <ul>
-            <li class="brand"><img src="logo.png" alt="Presenting">Spotify</li>
-            <li>Home</li>
-            <li>About</li>
+            <li class="brand"><img src="logo.png" alt="Presenting"><a href="index.html">Spotify</a></li>
+            <!-- <li><a href="index.html">Playlist</a></li> -->
+            <li><a href="about.html">About</a></li>
         </ul>
     </nav>
 
@@ -23,8 +25,10 @@
         <div class="songList">
             <div class="songItem" style="margin-top: 0;">
                 <img src="img1.jpg" alt="1">
-                <div class="songName">Tere Bina</div>
-                <div class="artist">A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan</div>
+                <div class="songDetails">
+                    <div class="songName">Tere Bina</div>
+                    <div class="artist">A.R. Rahman, Chinmayi, Murtuza Khan, Qadir Khan</div>
+                </div>
                 <div class="songListPlay"><div class="ts">5:10 <i id="1" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <!-- <div class="songItem">
@@ -35,56 +39,74 @@
             </div> -->
             <div class="songItem">
                 <img src="img2.jpg" alt="2">
-                <div class="songName">Choo lo</div>
-                <div class="artist">The Local Train</div>
+                <div class="songDetails">
+                    <div class="songName">Choo lo</div>
+                    <div class="artist">The Local Train</div>
+                </div>
                 <div class="songListPlay"><div class="ts">3:54 <i id="2" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img3.jpg" alt="3">
-                <div class="songName">Be Intehaan</div>
-                <div class="artist">Atif Aslam, Sunidhi Chauhan, Pritam</div>
+                <div class="songDetails">
+                    <div class="songName">Be Intehaan</div>
+                    <div class="artist">Atif Aslam, Sunidhi Chauhan, Pritam</div>
+                </div>
                 <div class="songListPlay"><div class="ts">4:51 <i id="3" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img4.jpg" alt="4">
-                <div class="songName">Jogi</div>
-                <div class="artist">Swastik The Band</div>
+                <div class="songDetails">
+                    <div class="songName">Jogi</div>
+                    <div class="artist">Swastik The Band</div>
+                </div>
                 <div class="songListPlay"><div class="ts">6:17 <i id="4" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img5.jpg" alt="5">
-                <div class="songName">LUNCH</div>
-                <div class="artist">Billie Eilish</div>
+                <div class="songDetails">
+                    <div class="songName">LUNCH</div>
+                    <div class="artist">Billie Eilish</div>
+                </div>
                 <div class="songListPlay"><div class="ts">3:00 <i id="5" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img6.jpg" alt="6">
-                <div class="songName">The Humma Song</div>
-                <div class="artist">A.R. Rahman, Badshah, Jubin Nautiyal, Shashaa Tirupati, Tanishk Bagchi</div>
+                <div class="songDetails">
+                    <div class="songName">The Humma Song</div>
+                    <div class="artist">A.R. Rahman, Badshah, Jubin Nautiyal, Shashaa Tirupati, Tanishk Bagchi</div>
+                </div>
                 <div class="songListPlay"><div class="ts">3:00 <i id="6" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img7.jpg" alt="7">
-                <div class="songName">Akh Lad Jaave</div>
-                <div class="artist">Asees Kaur, Badshah, Jubin Nautiyal, Tanishk Bagchi</div>
+                <div class="songDetails">
+                    <div class="songName">Akh Lad Jaave</div>
+                    <div class="artist">Asees Kaur, Badshah, Jubin Nautiyal, Tanishk Bagchi</div>
+                </div>
                 <div class="songListPlay"><div class="ts">3:00 <i id="7" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img8.jpg" alt="8">
-                <div class="songName">Maula Mere Maula</div>
-                <div class="artist">Roop Kumar Rathod</div>
+                <div class="songDetails">
+                    <div class="songName">Maula Mere Maula</div>
+                    <div class="artist">Roop Kumar Rathod</div>
+                </div>
                 <div class="songListPlay"><div class="ts">6:04 <i id="8" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img9.jpg" alt="9">
-                <div class="songName">Aaja Piya Tohe Pyaar Doon</div>
-                <div class="artist">Lata Mangeshkar</div>
+                <div class="songDetails">
+                    <div class="songName">Aaja Piya Tohe Pyaar Doon</div>
+                    <div class="artist">Lata Mangeshkar</div>
+                </div>
                 <div class="songListPlay"><div class="ts">4:11 <i id="9" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
             <div class="songItem">
                 <img src="img10.jpg" alt="10">
-                <div class="songName">Bahon Mein Chale Aao</div>
-                <div class="artist">Lata Mangeshkar</div>
+                <div class="songDetails">
+                    <div class="songName">Bahon Mein Chale Aao</div>
+                    <div class="artist">Lata Mangeshkar</div>
+                </div>
                 <div class="songListPlay"><div class="ts">4:02 <i id="10" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
             </div>
 
@@ -99,7 +121,11 @@
             <i class="fa-solid fa-2x fa-circle-play" id="masterPlay"></i>
             <i class="fa-solid fa-2x fa-forward-step" id="next"></i>
         </div>
-        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+        <div class="fullBar">
+            <div id="masterSongCurrentTime">0:00</div>
+            <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+            <div id="masterSongDuration">5:10</div>
+        </div>
     </div>
 
     <script src="https://kit.fontawesome.com/8573dfab7a.js" crossorigin="anonymous"></script>
