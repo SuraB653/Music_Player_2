@@ -4,6 +4,8 @@ let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let masterSongName = document.getElementById('masterSongName');
+let masterSongCurrentTime = document.getElementById('masterSongCurrentTime');
+let masterSongDuration = document.getElementById('masterSongDuration');
 let songItems = Array.from(document.getElementsByClassName('songItem')); 
 
 let songs = [
@@ -29,8 +31,14 @@ const makeAllPlays = ()=>{
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((Element)=>{
         Element.classList.remove('fa-circle-pause');
         Element.classList.add('fa-circle-play');
-
     })
+}
+
+function formatTime(seconds) {
+    let mins = Math.floor(seconds / 60);
+    let secs = Math.floor(seconds % 60);
+    if (secs < 10) secs = "0" + secs;
+    return `${mins}:${secs}`;
 }
 
 masterPlay.addEventListener('click', ()=>{
@@ -49,7 +57,29 @@ masterPlay.addEventListener('click', ()=>{
 audioElement.addEventListener('timeupdate', ()=>{
     progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
     myProgressBar.value = progress; 
+    masterSongCurrentTime.innerText = formatTime(audioElement.currentTime);
 })
+
+audioElement.addEventListener('ended', () => {
+    if (songIndex >= songs.length) {
+        songIndex = 1;
+    } else {
+        songIndex += 1;
+    }
+    audioElement.src = `songs/${songIndex}.mp3`;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    masterPlay.classList.remove('fa-circle-play');
+    masterPlay.classList.add('fa-circle-pause');
+    masterSongName.innerText = songs[songIndex - 1].songName;
+
+    makeAllPlays();
+    const currentPlayButton = document.getElementById(songIndex.toString());
+    if (currentPlayButton) {
+        currentPlayButton.classList.remove('fa-circle-play');
+        currentPlayButton.classList.add('fa-circle-pause');
+    }
+});
 
 myProgressBar.addEventListener('change', ()=>{
     audioElement.currentTime = (myProgressBar.value*audioElement.duration)/100;
@@ -67,7 +97,9 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((Element)=>{
         masterPlay.classList.remove('fa-circle-play');
         masterPlay.classList.add('fa-circle-pause');
         masterSongName.innerText = songs[songIndex-1].songName;
-        console.log(songIndex);
+        audioElement.addEventListener('loadedmetadata', () => {
+            masterSongDuration.innerText = formatTime(audioElement.duration);
+        });
     })
 })
 
@@ -83,8 +115,11 @@ document.getElementById('prev').addEventListener('click',()=>{
     audioElement.play(); 
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-circle-pause');
-    masterSongName.innerText = songs[songIndex].songName;
-    console.log(songIndex);
+    masterSongName.innerText = songs[songIndex-1].songName;
+    audioElement.addEventListener('loadedmetadata', () => {
+        masterSongDuration.innerText = formatTime(audioElement.duration);
+    });
+    // console.log(songIndex);
 })
 
 document.getElementById('next').addEventListener('click',()=>{
@@ -99,6 +134,9 @@ document.getElementById('next').addEventListener('click',()=>{
     audioElement.play(); 
     masterPlay.classList.remove('fa-circle-play');
     masterPlay.classList.add('fa-circle-pause');
-    masterSongName.innerText = songs[songIndex].songName;
-    console.log(songIndex);
+    masterSongName.innerText = songs[songIndex-1].songName;
+    audioElement.addEventListener('loadedmetadata', () => {
+        masterSongDuration.innerText = formatTime(audioElement.duration);
+    });
+    // console.log(songIndex);
 })
