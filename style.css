@@ -88,6 +88,12 @@ nav ul li{
     overflow: auto;
 }
 
+#index_container{
+    display: flex; 
+    flex-direction: column;
+    height: 33vh;
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 13px;
@@ -150,12 +156,19 @@ nav ul li{
     height: 50px;
     display: flex;
     background-color: rgb(16, 43, 3);
-    width: 69vw;
+    width: 68vw;
     margin: 12px 0;
     /* justify-content: space-between; */
     align-items: center;
     border-radius: 8px;
     user-select: none;
+}
+
+.playlist{
+    font-size: larger;
+    padding: 8px;
+    margin-bottom: 0px;
+    width: 68vw;
 }
 
 
@@ -222,17 +235,23 @@ nav ul li{
 
     .container{        
         margin: 12px 15px;
-        height: 67vh;
-        width: 84%;
+        height: 66vh;
+        width: 86%;
         padding: 12px;
-        padding-right: 10px;
+        padding-right: 9px;
+        margin-right: 13px;
     }
 
     .songItem{
         height: 58px;
-        width: 82vw;
+        width: 84vw;
         border-radius: 10px;
         margin: 8px 0;
+    }
+
+    .playlist{
+        padding: 8px;
+        width: 81vw;
     }
 
     .songItem img{
@@ -249,7 +268,7 @@ nav ul li{
     
     .songName{
         font-size: medium;
-        width: 52vw;
+        width: 54vw;
     }
 
     .artist{
@@ -274,6 +293,12 @@ nav ul li{
 
     ::-webkit-scrollbar {
         width: 5px;
+    }
+
+    .bottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 
     #masterSongName{
