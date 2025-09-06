@@ -1,6 +1,6 @@
 console.log("Welcome to Spotify")
 let songIndex = 1;
-let audioElement = new Audio('songs/1.mp3');
+let audioElement = new Audio('songs1/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
 let masterSongName = document.getElementById('masterSongName');
@@ -9,16 +9,16 @@ let masterSongDuration = document.getElementById('masterSongDuration');
 let songItems = Array.from(document.getElementsByClassName('songItem')); 
 
 let songs = [
-    {songName: "Tere Bina", filePath: "songs/1.mp3", coverPath:"img1.jpg"},
-    {songName: "Choo lo", filePath: "songs/2.mp3", coverPath:"img2.jpg"},
-    {songName: "Be Intehaan", filePath: "songs/3.mp3", coverPath:"img3.jpg"},
-    {songName: "Jogi", filePath: "songs/4.mp3", coverPath:"img4.jpg"},
-    {songName: "LUNCH", filePath: "songs/5.mp3", coverPath:"img5.jpg"},
-    {songName: "The Humma Song", filePath: "songs/6.mp3", coverPath:"img6.jpg"},
-    {songName: "Akh Lad Jaave", filePath: "songs/7.mp3", coverPath:"img7.jpg"},
-    {songName: "Maula Mere Maula", filePath: "songs/8.mp3", coverPath:"img8.jpg"},
-    {songName: "Aaja Piya Tohe Pyaar Doon", filePath: "songs/9.mp3", coverPath:"img9.jpg"},
-    {songName: "Bahon Mein Chale Aao", filePath: "songs/10.mp3", coverPath:"img10.jpg"}
+    {songName: "Tere Bina", filePath: "songs1/1.mp3", coverPath:"imgs1/img1.jpg"},
+    {songName: "Choo lo", filePath: "songs1/2.mp3", coverPath:"imgs1/img2.jpg"},
+    {songName: "Be Intehaan", filePath: "songs1/3.mp3", coverPath:"imgs1/img3.jpg"},
+    {songName: "Jogi", filePath: "songs1/4.mp3", coverPath:"imgs1/img4.jpg"},
+    {songName: "LUNCH", filePath: "songs1/5.mp3", coverPath:"imgs1/img5.jpg"},
+    {songName: "The Humma Song", filePath: "songs1/6.mp3", coverPath:"imgs1/img6.jpg"},
+    {songName: "Akh Lad Jaave", filePath: "songs1/7.mp3", coverPath:"imgs1/img7.jpg"},
+    {songName: "Maula Mere Maula", filePath: "songs1/8.mp3", coverPath:"imgs1/img8.jpg"},
+    {songName: "Aaja Piya Tohe Pyaar Doon", filePath: "songs1/9.mp3", coverPath:"imgs1/img9.jpg"},
+    {songName: "Bahon Mein Chale Aao", filePath: "songs1/10.mp3", coverPath:"imgs1/img10.jpg"}
 ]
 
 songItems.forEach((Element,i)=>{
@@ -66,7 +66,7 @@ audioElement.addEventListener('ended', () => {
     } else {
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex}.mp3`;
+    audioElement.src = `songs1/${songIndex}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-circle-play');
@@ -91,7 +91,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((Element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
-        audioElement.src = `songs/${songIndex}.mp3`;
+        audioElement.src = `songs1/${songIndex}.mp3`;
         audioElement.currentTime = 0;
         audioElement.play(); 
         masterPlay.classList.remove('fa-circle-play');
@@ -110,7 +110,7 @@ document.getElementById('prev').addEventListener('click',()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex}.mp3`;
+    audioElement.src = `songs1/${songIndex}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play(); 
     masterPlay.classList.remove('fa-circle-play');
@@ -129,7 +129,7 @@ document.getElementById('next').addEventListener('click',()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex}.mp3`;
+    audioElement.src = `songs1/${songIndex}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play(); 
     masterPlay.classList.remove('fa-circle-play');
