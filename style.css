@@ -2,6 +2,7 @@ body{
     /* background-color: #121212; */
     background-color: #3c5d2c;
     color: aliceblue;
+    user-select: none; 
     /* background-image: url("img3.jpg"); */
 }
 *{
