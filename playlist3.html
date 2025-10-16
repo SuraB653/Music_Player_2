@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Delius&family=Moo+Lah+Lah&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- google fonts end -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Presenting"><a href="index.html">Spotify</a></li>
+            <!-- <li><a href="index.html">Playlist</a></li> -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <div class="songItem" style="margin-top: 0;">
+                <img src="img1.jpg" alt="1">
+                <div class="songDetails">
+                    <div class="songName">Agar Tum Saath Ho</div>
+                    <div class="artist">
+                        <a href="https://tabs.ultimate-guitar.com/tab/misc-soundtrack/tamasha-agar-tum-saath-ho-chords-1780526"  target="_blank">
+                            Scale: G# | Guitar
+                        </a>
+                    </div>    
+                </div>
+                <div class="songListPlay"><div class="ts">2:56 <i id="1" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img2.jpg" alt="2">
+                <div class="songDetails">
+                    <div class="songName">Tum se hi</div>
+                    <div class="artist">
+                        <a href="https://tabs.ultimate-guitar.com/tab/misc-soundtrack/jab-we-met-tum-se-hi-chords-1425759" target="_blank">
+                            Scale: G# | Guitar
+                        </a>
+                    </div>
+                </div>
+                <div class="songListPlay"><div class="ts">4:13 <i id="2" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <!-- <div class="songItem">
+                <img src="img3.jpg" alt="3">
+                <div class="songDetails">
+                    <div class="songName">Tera Fitoor</div>
+                    <div class="artist">Arijit Singh, Himesh Reshammiya, Kumaar</div>
+                </div>
+                <div class="songListPlay"><div class="ts">5:10 <i id="3" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img4.jpg" alt="4">
+                <div class="songDetails">
+                    <div class="songName">Tose Naina</div>
+                    <div class="artist">Arijit Singh</div>
+                </div>
+                <div class="songListPlay"><div class="ts">4:24 <i id="4" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img5.jpg" alt="5">
+                <div class="songDetails">
+                    <div class="songName">Qayde Se</div>
+                    <div class="artist">Pritam, Arijit Singh, Amitabh Bhattacharya</div>
+                </div>
+                <div class="songListPlay"><div class="ts">3:35 <i id="5" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img6.jpg" alt="6">
+                <div class="songDetails">
+                    <div class="songName">Jugraafiya</div>
+                    <div class="artist">Udit Narayan, Shreya Ghoshal</div>
+                </div>
+                <div class="songListPlay"><div class="ts">4:34 <i id="6" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img7.jpg" alt="7">
+                <div class="songDetails">
+                    <div class="songName">Obhodro Prem</div>
+                    <div class="artist">Salman Muqtadi</div>
+                </div>
+                <div class="songListPlay"><div class="ts">3:16 <i id="7" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img8.jpg" alt="8">
+                <div class="songDetails">
+                    <div class="songName">Behka</div>
+                    <div class="artist">Karthik</div>
+                </div>
+                <div class="songListPlay"><div class="ts">5:11 <i id="8" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img9.jpg" alt="9">
+                <div class="songDetails">
+                    <div class="songName">Aaj Dil Gustakh Hai</div>
+                    <div class="artist">Sukhwinder Singh, Shreya Ghoshal, A.R. Rahman, Mayur Puri</div>
+                </div>
+                <div class="songListPlay"><div class="ts">5:27 <i id="9" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div>
+            <div class="songItem">
+                <img src="img10.jpg" alt="10">
+                <div class="songDetails">
+                    <div class="songName">Ye Ishq Hai</div>
+                    <div class="artist">Pritam, Shreya Ghoshal, Irshad Kamil</div>
+                </div>
+                <div class="songListPlay"><div class="ts">4:41 <i id="10" class="fa-solid songItemPlay fa-circle-play"></i></div></div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <div class="bottom">
+        <span id="masterSongName">Agar Tum Saath Ho</span>
+        <div class="icons">
+            <!-- fa-3x will increase the size of the icon -->
+            <i class="fa-solid fa-2x fa-backward-step" id="prev"></i>
+            <i class="fa-solid fa-2x fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-2x fa-forward-step" id="next"></i>
+        </div>
+        <div class="fullBar">
+            <div id="masterSongCurrentTime">0:00</div>
+            <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+            <div id="masterSongDuration">2:56</div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/8573dfab7a.js" crossorigin="anonymous"></script>
+    <script src="script3.js"></script>
+</body>
+</html>
