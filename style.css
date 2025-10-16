@@ -2,7 +2,7 @@ body{
     /* background-color: #121212; */
     background-color: #3c5d2c;
     color: aliceblue;
-    user-select: none; 
+    user-select: none;
     /* background-image: url("img3.jpg"); */
 }
 *{
@@ -92,7 +92,14 @@ nav ul li{
 #index_container{
     display: flex; 
     flex-direction: column;
-    height: 27vh;
+    height: 32vh;
+}
+
+#about_container{
+    flex-direction: column; 
+    text-align: justify; 
+    height: 36vh; 
+    color: #102b03;
 }
 
 /* SCROLLBAR */
@@ -174,8 +181,11 @@ nav ul li{
 
 
 .songItem:hover{
-    /* background-color: #2a2a2a; */
     background-color: #1e5105;
+}
+
+.songItem.active {
+      background-color: #d1e7ff; /* highlight color */
 }
 
 .songItem img{
@@ -305,7 +315,7 @@ nav ul li{
     #masterSongName{
         position: absolute;
         left: 10vw;
-        bottom: 9.5vh;
+        bottom: 10vh;
         font-size:large;
     }
 
@@ -322,6 +332,16 @@ nav ul li{
         width: 55vw;
     }
     
+    #index_container{
+        font-size: small;
+        height: 40vh;
+    }
+
+    #about_container{
+        height: 33vh;
+        font-size: 15px;
+    }
+
     /* input[type="range"]::-webkit-slider-runnable-track { 
         background-color: gray;
         height: 8px;
