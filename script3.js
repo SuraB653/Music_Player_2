@@ -11,7 +11,7 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 let songs = [
     {songName: "Agar Tum Saath Ho", filePath: "songs3/1.mp3", coverPath:"songs3/note_heart.jpeg"},
     {songName: "Tum Se Hi", filePath: "songs3/2.mp3", coverPath:"songs3/note_heart.jpeg"},
-    // {songName: "Tera Fitoor", filePath: "songs3/3.mp3", coverPath:"songs3/note.jpg"},
+    {songName: "Tere Bina Zindagi Se Koi", filePath: "songs3/3.mp3", coverPath:"songs3/note_heart.jpeg"},
     // {songName: "Tose Naina", filePath: "songs3/4.mp3", coverPath:"songs3/note.jpg"},
     // {songName: "Qayde Se", filePath: "songs3/5.mp3", coverPath:"songs3/note.jpg"},
     // {songName: "Jugraafiya", filePath: "songs3/6.mp3", coverPath:"songs3/note.jpg"},
