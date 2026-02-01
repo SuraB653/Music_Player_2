@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Delius&family=Moo+Lah+Lah&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- google fonts end -->
+</head>
+<body style="background-color: rgb(199, 134, 145);">
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Presenting"><a href="index.html">Spotify</a></li>
+            <!-- <li><a href="index.html">Playlist</a></li> -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" style="background-color: rgb(233, 187, 195);">
+        <div style="font-size: 50px; margin-bottom: 10vh;margin-top: 5vh;">
+            YAYYYYY!!!
+        </div>
+        <div style="width: 69vw; display: flex;font-size: 45px; justify-content: space-around;">
+            <img src="val_yes.jpg">
+            <button style="margin-top: 45vh;">
+                <a href="play_val.html">Back</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <span id="masterSongName">Agar Tum Saath Ho</span>
+        <div class="icons">
+            <!-- fa-3x will increase the size of the icon -->
+            <i class="fa-solid fa-2x fa-backward-step" id="prev"></i>
+            <i class="fa-solid fa-2x fa-circle-play" id="masterPlay"></i>
+            <i class="fa-solid fa-2x fa-forward-step" id="next"></i>
+        </div>
+        <div class="fullBar">
+            <div id="masterSongCurrentTime">0:00</div>
+            <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+            <div id="masterSongDuration">2:56</div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/8573dfab7a.js" crossorigin="anonymous"></script>
+    <script src="script3.js">
+        
+    </script>
+</body>
+</html>
