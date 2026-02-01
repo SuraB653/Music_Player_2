@@ -390,3 +390,16 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
+button{
+    height: 15vh;
+    font-size: 45px;
+    background-color: rgb(235, 152, 166); padding: 15px; border-radius: 20px;
+}
+#no:hover{
+    /* background-color: red; */
+    visibility: hidden;
+}
+#yes:hover{
+    background-color: rgb(131, 208, 16);
+}
